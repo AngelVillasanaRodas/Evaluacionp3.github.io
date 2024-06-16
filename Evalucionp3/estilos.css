@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    background-color: beige;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+#contenedor{
+    width:75%;
+    height: 670px;
+    border:2px solid red;
+    margin:auto;
+    background-color: pink;
+    
+}
+#resultado{
+    height: 200px;
+    background-color: aqua;
+    margin:20px;
+    color:blue;
+    text-align: center;
+}
+#caja{
+    width:75%;
+    height: 350px;
+    border:2px solid red;
+    margin:auto;
+    background-color: palegoldenrod;
+}
+.circulo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    margin: 1px;
+}

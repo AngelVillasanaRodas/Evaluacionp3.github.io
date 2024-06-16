@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>Calcular la suma de números del tipo (11) + (22) + (33) + ... + (NN)</h3>
+        <div id="resultadoSuma"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Declaración de variables
+    let numeroN;
+    let suma = 0;
+    let i = 1;
+    let numerosSumados = [];
+
+    // Fase entrada/lectura de datos con prompt
+    numeroN = parseInt(prompt("Ingrese el valor de N"));
+
+    // Fase de procesamiento de datos
+    while (i <= numeroN) {
+        let numero = parseInt(i.toString() + i.toString());
+        numerosSumados.push(numero);
+        suma += numero;
+        i++;
+    }
+
+    // Fase de salida
+    const resultadoSuma = document.getElementById('resultadoSuma');
+    resultadoSuma.innerHTML = `
+        <p>Usted ingresó el valor N como: ${numeroN}</p>
+        <p>Los números sumados del tipo (11) + (22) + (33) + ... + (${numeroN}${numeroN}) son: ${numerosSumados.join(', ')}</p>
+        <p>La suma total es: ${suma}</p>
+    `;
+});
+        </script>
+    </div>
+</body>
+</html>

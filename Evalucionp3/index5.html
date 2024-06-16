@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>Cuadro de círculos de 10x10</h3>
+        <div id="cuadroCirculos"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const cuadroCirculos = document.getElementById('cuadroCirculos');
+    
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < 10; j++) {
+            const circulo = document.createElement('div');
+            circulo.classList.add('circulo');
+            cuadroCirculos.appendChild(circulo);
+        }
+        cuadroCirculos.appendChild(document.createElement('br')); // Salto de línea después de cada fila
+    }
+});
+    </script>
+</body>
+</html>

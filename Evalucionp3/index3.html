@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h1>Calcular Media Aritmética de los Primeros Números Pares</h1>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const resultadoDiv = document.getElementById('resultado');
+    
+    // Función para calcular los primeros 4 números pares y su media aritmética
+    function calcularNumerosParesYMedia() {
+        let suma = 0;
+        let contador = 0;
+        let numero = 2; // Empezamos desde el primer número par
+        
+        while (contador < 4) {
+            suma += numero;
+            contador++;
+            numero += 2; // Siguiente número par
+        }
+        
+        const media = suma / 4;
+        return media;
+    }
+    
+    // Llamar a la función y mostrar el resultado en el div de resultado
+    const mediaAritmetica = calcularNumerosParesYMedia();
+    resultadoDiv.textContent = `Los primeros 4 números pares son: 2, 4, 6, 8. La media aritmética es: ${mediaAritmetica}`;
+});
+    </script>
+</body>
+</html>

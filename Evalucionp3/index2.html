@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>Múltiplos de 7 entre 100 y 300, excluyendo 120-180</h3>
+        <ul id="multiplos"></ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const listaMultiplos = document.getElementById('multiplos');
+    for (let i = 101; i <= 300; i++) {
+        if (i % 7 === 0 && (i < 120 || i > 180)) {
+            const item = document.createElement('li');
+            item.textContent = i;
+            listaMultiplos.appendChild(item);
+        }
+    }
+});
+    </script>
+</body>
+</html>
